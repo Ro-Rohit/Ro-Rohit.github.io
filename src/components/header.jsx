@@ -65,7 +65,7 @@ const Header = ({ active, isScrolled }) => {
                                 </Animator>
 
                                 <Animator active={active}>
-                                    <img className="object-cover   -translate-y-1   h-full" src={homeData.avator} alt="" />
+                                    <img className="object-cover contrast-[105%]   -translate-y-1   h-full" src={homeData.avator} alt="" />
                                 </Animator>
                             </a>
 

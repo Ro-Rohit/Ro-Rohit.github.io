@@ -100,7 +100,7 @@ const Footer = ({ active }) => {
                 <form ref={formRef} onSubmit={handleSubmit} className="h-full w-full max-w-[800px] md:mr-auto mx-auto">
                     <Animator active={active}>
                         <BleepsOnAnimator continuous transitions={{ entering: 'type' }} />
-                        <Text style={{ color: theme.colors.secondary.main(1) }} className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1">Let's connect</Text>
+                        <Text style={{ color: theme.colors.secondary.text(1) }} className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1">Let's connect</Text>
                     </Animator>
 
                     {/* input for email */}
