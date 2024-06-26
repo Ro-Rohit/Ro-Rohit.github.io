@@ -50,7 +50,7 @@ const ResumePage = () => {
                             <AnimatorUIListener>
                                 <HeadingComponent title={summaryData.title} active={active} />
 
-                                <NefraxFrame>
+                                <NefraxFrame >
                                     <Animator>
                                         <BleepsOnAnimator continuous transitions={{ entering: 'type', }} />
                                         <Text as="p" style={{ color: theme.colors.secondary.text(0) }} className="font-secondary  font-medium text-lg leading-relaxed">

@@ -2,7 +2,7 @@ import { Animated, Animator, BleepsOnAnimator, FrameSVGOctagon, FrameSVGUnderlin
 import { useEffect, useRef, useState } from "react";
 import { octagonStyle, theme } from "../utlis/settings";
 import { homeData, socialLinksData } from "../data";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const HomePage = () => {
     const svgRef = useRef(null);
@@ -76,11 +76,15 @@ const HomePage = () => {
                 <BleepsOnAnimator transitions={{ entering: 'type' }}
                     continuous
                 />
-                <Text as="p" manager="sequence" style={{ color: theme.colors.primary.text(1) }} className="max-w-[500px] px-2 w-full font-secondary text-center leading-relaxed hover:mix-blend-plus-lighter transition-all duration-150">
-                    {homeData.point1}
-                    {homeData.point2}
-                    {homeData.point3}
-                </Text>
+                <ul className="max-w-[500px] mb-2 text-[16px]  gap-x-3 justify-center items-center flex-wrap px-2 w-full font-secondary text-center leading-relaxed hover:mix-blend-plus-lighter transition-all duration-150">
+                    <Text as="p" style={{ color: theme.colors.primary.text(1) }}>
+                        {homeData.point1}
+                    </Text>
+                    <Text as="p" className="uppercase text-[15px] tracking-wider  font-medium" style={{ color: theme.colors.primary.text(1) }}>
+                        {homeData.point2}
+                    </Text>
+
+                </ul>
             </Animator>
 
 
@@ -102,24 +106,24 @@ const HomePage = () => {
             <Animator active={active} duration={{ delay: 1, enter: 1.3 }}>
                 <Animated as="div" className="flex flex-wrap justify-center max-w-[500px] w-full px-3    items-center gap-x-6 md:gap-x-16 gap-y-4" animated={[aaVisibility(), aa('y', '2rem', 0)]}  >
 
-                    <Link to={'/projects'}>
-                        <Animated
-                            onMouseEnter={hoverSound}
-                            as="a"
-                            className='underline flex-1 w-full'
-                            style={{
-                                position: 'relative',
-                                height: 40,
-                                maxWidth: '170px',
-                                width: '100%',
-                                textAlign: 'center',
-                                padding: theme.space(1.4)
-                            }}
+                    <Animated
+                        onMouseEnter={hoverSound}
+                        as="a"
+                        onClick={() => Navigate('/projects')}
+                        className='underline flex-1 w-full'
+                        style={{
+                            position: 'relative',
+                            height: 40,
+                            maxWidth: '170px',
+                            width: '100%',
+                            textAlign: 'center',
+                            padding: theme.space(1.4)
+                        }}
 
-                        >
+                    >
 
-                            <style>
-                                {`
+                        <style>
+                            {`
                             .underline .arwes-react-frames-framesvgunderline [data-name=bg] {
                                 color: ${theme.colors.primary.deco(2)};
                             },
@@ -127,63 +131,62 @@ const HomePage = () => {
                                 color: hsl(60, 75%, 50%);
                             }
                             `
-                                }
-                            </style>
+                            }
+                        </style>
 
-                            <Animator>
-                                <FrameSVGUnderline
-                                    squareSize={32}
-                                    strokeWidth={2}
-                                />
-                            </Animator>
+                        <Animator>
+                            <FrameSVGUnderline
+                                squareSize={32}
+                                strokeWidth={2}
+                            />
+                        </Animator>
 
+                        <Animator active={active}>
 
-
-                            <Animator active={active}>
-                                <Text
-                                    as="button"
-                                    style={{ color: theme.colors.primary.text(1) }}
-                                    className="font-medium text-[17px] font-primary hover:mix-blend-plus-lighter transition-all duration-150"
-                                >
-                                    Project
-                                </Text>
-                            </Animator>
-                        </Animated>
-                    </Link>
-
-                    <Link to={'/about'}>
-                        <Animated
-                            href="/about"
-                            onMouseEnter={hoverSound}
-                            as="a"
-                            className='underline flex-1 w-full max-w-[170px]'
-                            style={{
-                                position: 'relative',
-                                height: 40,
-                                textAlign: 'center',
-                                padding: theme.space(1.4)
-                            }}>
-
-                            <Animator>
-                                <FrameSVGUnderline
-                                    squareSize={32}
-                                    strokeWidth={2}
-                                />
-                            </Animator>
+                            <Text
+                                as="button"
+                                style={{ color: theme.colors.primary.text(1) }}
+                                className="font-medium text-[17px] font-primary hover:mix-blend-plus-lighter transition-all duration-150"
+                            >
+                                Project
+                            </Text>
+                        </Animator>
+                    </Animated>
 
 
+                    <Animated
+                        href="/about"
+                        onMouseEnter={hoverSound}
+                        as="a"
+                        onClick={() => Navigate('/about')}
+                        className='underline flex-1 w-full max-w-[170px]'
+                        style={{
+                            position: 'relative',
+                            height: 40,
+                            textAlign: 'center',
+                            padding: theme.space(1.4)
+                        }}>
 
-                            <Animator active={active}>
-                                <Text
-                                    as="button"
-                                    style={{ color: theme.colors.primary.text(1) }}
-                                    className="font-medium font-primary text-[17px] hover:mix-blend-plus-lighter transition-all duration-150"
-                                >
-                                    About me
-                                </Text>
-                            </Animator>
-                        </Animated>
-                    </Link>
+                        <Animator>
+                            <FrameSVGUnderline
+                                squareSize={32}
+                                strokeWidth={2}
+                            />
+                        </Animator>
+
+
+
+                        <Animator active={active}>
+                            <Text
+                                as="button"
+                                style={{ color: theme.colors.primary.text(1) }}
+                                className="font-medium font-primary text-[17px] hover:mix-blend-plus-lighter transition-all duration-150"
+                            >
+                                About me
+                            </Text>
+                        </Animator>
+                    </Animated>
+
                 </Animated>
             </Animator>
 

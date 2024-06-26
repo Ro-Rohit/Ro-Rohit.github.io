@@ -2,15 +2,15 @@ import { Animator, FrameSVGNefrex, useFrameSVGAssemblingAnimation } from "@arwes
 import { useRef } from "react";
 import { theme } from "../utlis/settings";
 
-const NefraxFrame = ({ children, squareSize, }) => {
+const NefraxFrame = ({ children, squareSize, padding }) => {
     const svgRef = useRef(null);
     const { onRender } = useFrameSVGAssemblingAnimation(svgRef);
 
     return (
         <div
-            className="Nefrex mt-10 mb-[150px] md:py-14 py-6  md:px-10 px-3    w-full "
+            className="Nefrex mt-10 mb-[150px] md:py-14     w-full "
             style={{
-                // padding: theme.space(padding ?? [15, 10]),
+                padding: theme.space(padding ?? [15, 10]),
                 position: 'relative',
                 textAlign: 'left',
             }}

@@ -1,7 +1,7 @@
 import { Animated, Animator, FrameSVGKranox, Text, aa, aaFlicker, aaOpacity, aaVisibility, useBleeps, useFrameSVGAssemblingAnimation } from "@arwes/react";
 import { kranoxStyle, theme } from "../utlis/settings";
 import { useRef, } from "react";
-import { socialLinksData } from "../data/index";
+import { homeData, socialLinksData } from "../data/index";
 
 
 const SocialLinks = () => {
@@ -65,7 +65,7 @@ const Header = ({ active, isScrolled }) => {
                                 </Animator>
 
                                 <Animator active={active}>
-                                    <img className="object-cover  contrast-125 -translate-y-1   h-full" src="../src/assets/leo.png" alt="" />
+                                    <img className="object-cover  contrast-125 -translate-y-1   h-full" src={homeData.avator} alt="" />
                                 </Animator>
                             </a>
 

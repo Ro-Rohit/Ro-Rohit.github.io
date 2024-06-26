@@ -2,7 +2,7 @@ export const homeData = {
     avator: "./assets/leo.png",
     name: 'Rohit singh',
     point1: 'Full Stack Developer.',
-    point2: 'Next.js, React.js, Node.js, Figma.',
+    point2: 'Next.js React.js, Node.js, Figma.',
     point3: 'Exploring new tech and open source.',
 }
 

@@ -7,6 +7,7 @@ import NefraxFrame from "../components/nefrax-frame";
 import { projectData } from "../data";
 import Footer from "../components/footer";
 import { octagonStyle, theme } from "../utlis/settings";
+import useScreenWidth from "../hook/use-screen-width";
 
 const ProjectPage = () => {
     const svgRef = useRef(null);
@@ -15,6 +16,7 @@ const ProjectPage = () => {
     const divRef = useRef(null);
     const [active, setActive] = useState(false);
     const [isScrolled, setScroll] = useState(false);
+    const screenWidth = useScreenWidth();
 
 
     const handleScroll = (event) => {
@@ -74,7 +76,7 @@ const ProjectPage = () => {
                                 <Animator key={idx}>
                                     <AnimatorUIListener>
                                         <div className="md:mb-[200px] mb-[100px]">
-                                            <NefraxFrame squareSize={0}  >
+                                            <NefraxFrame padding={screenWidth < 700 ? [6, 3] : [15, 10]} squareSize={0}  >
                                                 <Animator>
                                                     <img style={{ borderColor: 'hsl(60, 75%, 50%)' }} className="w-full max-h-[450px] h-full border-b-4 object-cover object-top" src={project.image} alt="image" />
                                                 </Animator>
@@ -102,8 +104,8 @@ const ProjectPage = () => {
 
                                                             <div className="flex items-center  gap-x-2">
                                                                 {project.work === 'code'
-                                                                    ? <img className="size-6" src="../src/assets/code1.svg" alt="code" />
-                                                                    : <img className="size-6" src="../src/assets/design.svg" alt="design" />
+                                                                    ? <img className="size-6" src="./assets/code1.svg" alt="code" />
+                                                                    : <img className="size-6" src="./assets/design.svg" alt="design" />
                                                                 }
                                                                 <Text as="p" className=" font-secondary font-medium " >{project.work}</Text>
                                                             </div>
@@ -112,9 +114,11 @@ const ProjectPage = () => {
 
 
 
-                                                        <button className="border-[1px] py-2.5 px-1 bg-transparent border-[hsla(80,91%,83.06%,1)]" tabindex="-1" >
+                                                        <button className="border-[1px] py-2.5 px-1 bg-transparent border-[hsla(80,91%,83.06%,1)]" tabIndex="-1" >
                                                             <Animator>
-                                                                <a href={project.link} target="_blank" style={{ color: theme.colors.info.bg(0), }} className="py-2 px-5 bg-[#cee9e9] hover:bg-[#f4dcff] transition-all duration-300  font-primary uppercase">See more</a>
+                                                                <a href={project.link} target="_blank" style={{ color: theme.colors.info.bg(0), }} className="py-2 px-5 bg-[#cee9e9] hover:bg-[#f4dcff] transition-all duration-300  font-primary uppercase">
+                                                                    ${idx === 0 ? 'working' : 'see more'}
+                                                                </a>
                                                             </Animator>
                                                         </button>
 
