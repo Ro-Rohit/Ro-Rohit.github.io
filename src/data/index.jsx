@@ -85,20 +85,20 @@ export const resumeData = {
         title: 'Education',
         description: [
             {
+                title: 'Bachelor of Computer Application',
                 image: './assets/ai.png',
                 alt: 'college',
-                title: 'Bachelor of Computer Application',
                 date: 'Expected 2025, Raipur India',
                 href: 'https://www.gnscr.ac.in/',
-                subtitle: '',
+                subtitle: "Bachelor's Degree. 60% of the studies were finished. Remaining studies were self-taught.",
                 linkText: 'Govt. Nagarjuna science College',
             },
             {
+                title: 'AISSC Examination',
                 image: './assets/ai2.png',
                 alt: 'school',
-                title: 'AISSC Examination',
                 date: '2019 - 2020, Raipur India',
-                subtitle: "Bachelor's Degree. 60% of the studies were finished. Remaining studies were self-taught.",
+                subtitle: '',
                 href: 'https://shrigujratienglishschool.in/',
                 linkText: 'Shri Gujarati Eng Med Hr Sec School',
             }
