@@ -6,7 +6,7 @@ export const stylesBaseline = createAppStylesBaseline(theme);
 
 export const octagonStyle = `
 .octagon .arwes-react-frames-framesvgoctagon [data-name=bg] {
-    color: ${theme.colors.primary.deco(1)};
+    color: ${theme.colors.primary.deco(2)};
     filter: drop-shadow(0 0 4px hsl(60, 75%, 10%))                           
 }
 .octagon .arwes-react-frames-framesvgoctagon [data-name=line] {

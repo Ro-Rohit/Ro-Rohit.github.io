@@ -197,8 +197,8 @@ export const resumeData = {
             "Software Architecture.",
             'Reading books',
             'Solving complex problems.',
-            'Engaging in open-source projects  and communities.',
-            'Learning and experimenting with new technologies.',
+            'Engaging in open-source projects.',
+            'Learning new technologies.',
             "Nature.",
         ]
     },

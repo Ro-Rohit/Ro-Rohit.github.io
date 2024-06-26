@@ -18,7 +18,7 @@ const NefraxFrame = ({ children, squareSize, padding }) => {
 
             <style>{`
                         .Nefrex .arwes-react-frames-framesvgnefrex [data-name=bg] {
-                            color: ${theme.colors.primary.deco(1)};
+                            color: ${theme.colors.primary.deco(5)};
                             filter: drop-shadow(0 0 4px hsl(60, 75%, 10%))
                         }
                         .Nefrex .arwes-react-frames-framesvgnefrex [data-name=line] {

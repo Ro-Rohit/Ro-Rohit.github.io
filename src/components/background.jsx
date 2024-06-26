@@ -4,7 +4,7 @@ import BgPuffs from './puffs';
 const Background = ({ theme }) => {
     return (
         <div
-            className='bg-small fixed contrast-[112%]   md:bg-big bg-center bg-cover bg-no-repeat w-full  h-full'
+            className='bg-big fixed contrast-[112%]   md:bg-big bg-center bg-cover bg-no-repeat w-full  h-full'
         >
             <div
                 style={{ background: 'radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7))' }}

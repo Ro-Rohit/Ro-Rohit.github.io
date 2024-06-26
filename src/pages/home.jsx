@@ -51,7 +51,7 @@ const HomePage = () => {
                     </Animator>
 
                     <Animator active={active}>
-                        <img className="object-cover contrast-[107%]  scale-105   rounded-lg  h-full" src={homeData.avator} alt="leo" />
+                        <img className="object-cover contrast-[102%] brightness-110  scale-105   rounded-lg  h-full" src={homeData.avator} alt="leo" />
                     </Animator>
                 </div>
             </Animator>

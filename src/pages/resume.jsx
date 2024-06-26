@@ -1,4 +1,4 @@
-import { Animated, Animator, BleepsOnAnimator, Text, useFrameSVGAssemblingAnimation, FrameSVGOctagon, GridLines, MovingLines, } from "@arwes/react";
+import { Animated, Animator, BleepsOnAnimator, Text, useFrameSVGAssemblingAnimation, FrameSVGOctagon, GridLines, MovingLines, aaOpacity, } from "@arwes/react";
 import Header from "../components/header";
 import { useEffect, useRef, useState } from "react";
 import { octagonStyle, octagonStyle2, theme } from "../utlis/settings";
@@ -150,44 +150,43 @@ const ResumePage = () => {
                                             distance={400}
                                         />
                                     </Animator>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 ">
+                                    <Animator combine merge manager="stagger" active={active}>
 
-                                        {
-                                            EducationData.description.map((element, idx) =>
-                                                <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
-                                                    <div
-                                                        className="octagon relative"
-                                                    >
-                                                        <style>
-                                                            {octagonStyle2}
-                                                        </style>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 ">
 
-                                                        <div style={{
-                                                            position: 'relative',
-                                                            height: 100,
-                                                            width: 100,
-                                                        }}>
-                                                            <Animator active={active}>
+                                            {
+                                                EducationData.description.map((element, idx) =>
+                                                    <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
+                                                        <div
+                                                            className="octagon relative"
+                                                        >
+                                                            <style>
+                                                                {octagonStyle2}
+                                                            </style>
+
+                                                            <div style={{
+                                                                position: 'relative',
+                                                                height: 100,
+                                                                width: 100,
+                                                            }}>
                                                                 <FrameSVGOctagon
                                                                     elementRef={svgRef}
                                                                     onRender={onRender}
                                                                     padding={-8}
                                                                 />
-                                                            </Animator>
 
-                                                            <Animator active={active}>
-                                                                <img className="object-cover -translate-x-1  -translate-y-1  rounded-md object-center p-2 contrast-125 " src={element.image} alt="" />
-                                                            </Animator>
+                                                                <Animated animated={[aaOpacity()]}>
+                                                                    <img className="object-cover -translate-x-1  -translate-y-1  rounded-md object-center p-2 contrast-125 " src={element.image} alt="" />
+                                                                </Animated>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div>
-                                                        <Animator manager="parallel" active={active}>
-                                                            <Text as="h2" manager="sequence" style={{ color: theme.colors.secondary.main(2) }} className="text-[20px] md:text-[22px] font-normal font-primary mb-2.5 lg:text-[23px]">
+                                                        <div>
+                                                            <Text as="h2" style={{ color: theme.colors.success.main(3) }} className="text-[20px] md:text-[22px] font-normal font-primary mb-2.5 lg:text-[23px]">
                                                                 {element.title}
                                                             </Text>
 
-                                                            <Text as="a" target="_blank" className=" font-thin font-secondary text-[17px]" style={{ color: theme.colors.success.main(3), }} href={element.href}>
+                                                            <Text as="a" target="_blank" className=" font-thin font-secondary text-[17px]" style={{ color: theme.colors.secondary.main(1), }} href={element.href}>
                                                                 {element.linkText}
                                                                 <svg className=" ml-1 mb-0.5 size-6 inline-block stroke-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >
                                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -201,13 +200,13 @@ const ResumePage = () => {
                                                             <Text as="p" className="pt-6 font-secondary font-medium" style={{ color: theme.colors.primary.text(1), fontSize: 18, }}>
                                                                 {element.subtitle}
                                                             </Text>
-                                                        </Animator>
-                                                    </div>
+                                                        </div>
 
-                                                </div>
-                                            )
-                                        }
-                                    </div>
+                                                    </div>
+                                                )
+                                            }
+                                        </div>
+                                    </Animator>
                                 </Card>
                             </AnimatorUIListener>
                         </Animator>
@@ -229,39 +228,36 @@ const ResumePage = () => {
                                             distance={400}
                                         />
                                     </Animator>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 ">
+                                    <Animator active={active} combine merge manager="stagger">
 
-                                        {
-                                            CoursesData.description.map((element, idx) =>
-                                                <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
-                                                    <div
-                                                        className="octagon relative"
-                                                    >
-                                                        <style>
-                                                            {octagonStyle2}
-                                                        </style>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 ">
 
-                                                        <div style={{
-                                                            position: 'relative',
-                                                            height: 90,
-                                                            width: 90,
-                                                        }}>
-                                                            <Animator active={active}>
+                                            {
+                                                CoursesData.description.map((element, idx) =>
+                                                    <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
+                                                        <div
+                                                            className="octagon relative"
+                                                        >
+                                                            <style>
+                                                                {octagonStyle2}
+                                                            </style>
+
+                                                            <div style={{
+                                                                position: 'relative',
+                                                                height: 90,
+                                                                width: 90,
+                                                            }}>
                                                                 <FrameSVGOctagon
                                                                     elementRef={svgRef}
                                                                     onRender={onRender}
                                                                     padding={-8}
                                                                 />
-                                                            </Animator>
 
-                                                            <Animator active={active}>
                                                                 <img className="object-cover -translate-x-1  -translate-y-1  rounded-md object-center p-2 contrast-125 " src={element.image} alt={element.alt} />
-                                                            </Animator>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div className="font-secondary ">
-                                                        <Animator active={active}>
+                                                        <div className="font-secondary ">
                                                             <Text as="h2" style={{ color: `hsl(60, 75%, 65%)` }} className="text-[18px] font-primary tracking-wide font-normal mb-2 md:text-[20px]">
                                                                 {element.title}
                                                             </Text>
@@ -277,13 +273,13 @@ const ResumePage = () => {
                                                             <Text style={{ color: theme.colors.primary.text(2), fontSize: 14, }} as="p">
                                                                 {element.date}
                                                             </Text>
-                                                        </Animator>
-                                                    </div>
+                                                        </div>
 
-                                                </div>
-                                            )
-                                        }
-                                    </div>
+                                                    </div>
+                                                )
+                                            }
+                                        </div>
+                                    </Animator>
                                 </Card>
                             </AnimatorUIListener>
                         </Animator>

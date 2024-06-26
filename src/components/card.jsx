@@ -1,6 +1,5 @@
 import {
     useBleeps,
-    BleepsOnAnimator,
     Animated,
     FrameSVGCorners,
     aa,
@@ -28,7 +27,7 @@ const Card = ({ theme, children }) => {
             >
                 <style>{`
                     .card .arwes-react-frames-framesvg [data-name=bg] {
-                    color: ${theme.colors.primary.deco(1)};
+                    color: ${theme.colors.primary.deco(3)};
                     }
                     .card .arwes-react-frames-framesvg [data-name=line] {
                         color: hsl(60, 75%, 50%);

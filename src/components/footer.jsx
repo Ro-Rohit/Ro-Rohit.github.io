@@ -4,10 +4,20 @@ import { kranoxStyle, linesStyle, octagonStyle, theme } from "../utlis/settings"
 import { socialLinksData } from "../data";
 import { sendEmail } from "../utlis/emails-service";
 
-const SocialLinks = ({ active }) => {
+const SocialFrame = () => {
     const svgRef = useRef(null);
     const { onRender } = useFrameSVGAssemblingAnimation(svgRef);
-    const bleeps = useBleeps();
+    return (
+        <FrameSVGOctagon
+            elementRef={svgRef}
+            onRender={onRender}
+            padding={2}
+        />
+    )
+}
+
+const SocialLinks = ({ active }) => {
+
     return (
         <div className="flex items-center gap-x-6">
             {
@@ -21,11 +31,9 @@ const SocialLinks = ({ active }) => {
                         <style>
                             {octagonStyle}
                         </style>
-                        <FrameSVGOctagon
-                            elementRef={svgRef}
-                            onRender={onRender}
-                            padding={2}
-                        />
+
+                        <SocialFrame />
+
                         <Animator active={active}>
                             <div className=" translate-x-3.5 translate-y-3.5" >
                                 {element.icon}
@@ -37,11 +45,10 @@ const SocialLinks = ({ active }) => {
                 )
             }
         </div>
-
-
-
     );
 }
+
+
 
 
 const Footer = ({ active }) => {
@@ -100,7 +107,7 @@ const Footer = ({ active }) => {
                 <form ref={formRef} onSubmit={handleSubmit} className="h-full w-full max-w-[800px] md:mr-auto mx-auto">
                     <Animator active={active}>
                         <BleepsOnAnimator continuous transitions={{ entering: 'type' }} />
-                        <Text style={{ color: theme.colors.secondary.text(1) }} className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1">Let's connect</Text>
+                        <Text style={{ color: theme.colors.secondary.main(1) }} className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1">Let's connect</Text>
                     </Animator>
 
                     {/* input for email */}
