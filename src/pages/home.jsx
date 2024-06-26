@@ -2,7 +2,7 @@ import { Animated, Animator, BleepsOnAnimator, FrameSVGOctagon, FrameSVGUnderlin
 import { useEffect, useRef, useState } from "react";
 import { octagonStyle, theme } from "../utlis/settings";
 import { homeData, socialLinksData } from "../data";
-import { Link, Navigate } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 const HomePage = () => {
     const svgRef = useRef(null);
@@ -106,10 +106,8 @@ const HomePage = () => {
             <Animator active={active} duration={{ delay: 1, enter: 1.3 }}>
                 <Animated as="div" className="flex flex-wrap justify-center max-w-[500px] w-full px-3    items-center gap-x-6 md:gap-x-16 gap-y-4" animated={[aaVisibility(), aa('y', '2rem', 0)]}  >
 
-                    <Animated
+                    <div
                         onMouseEnter={hoverSound}
-                        as="a"
-                        onClick={() => Navigate('/projects')}
                         className='underline flex-1 w-full'
                         style={{
                             position: 'relative',
@@ -142,23 +140,21 @@ const HomePage = () => {
                         </Animator>
 
                         <Animator active={active}>
-
-                            <Text
-                                as="button"
-                                style={{ color: theme.colors.primary.text(1) }}
-                                className="font-medium text-[17px] font-primary hover:mix-blend-plus-lighter transition-all duration-150"
-                            >
-                                Project
-                            </Text>
+                            <Link to={'/projects'}>
+                                <Text
+                                    as="button"
+                                    style={{ color: theme.colors.primary.text(1) }}
+                                    className="font-medium text-[17px] font-primary hover:mix-blend-plus-lighter transition-all duration-150"
+                                >
+                                    Project
+                                </Text>
+                            </Link>
                         </Animator>
-                    </Animated>
+                    </div>
 
 
-                    <Animated
-                        href="/about"
+                    <div
                         onMouseEnter={hoverSound}
-                        as="a"
-                        onClick={() => Navigate('/about')}
                         className='underline flex-1 w-full max-w-[170px]'
                         style={{
                             position: 'relative',
@@ -175,17 +171,18 @@ const HomePage = () => {
                         </Animator>
 
 
-
-                        <Animator active={active}>
-                            <Text
-                                as="button"
-                                style={{ color: theme.colors.primary.text(1) }}
-                                className="font-medium font-primary text-[17px] hover:mix-blend-plus-lighter transition-all duration-150"
-                            >
-                                About me
-                            </Text>
-                        </Animator>
-                    </Animated>
+                        <Link to={'/about'}>
+                            <Animator active={active}>
+                                <Text
+                                    as="button"
+                                    style={{ color: theme.colors.primary.text(1) }}
+                                    className="font-medium font-primary text-[17px] hover:mix-blend-plus-lighter transition-all duration-150"
+                                >
+                                    About me
+                                </Text>
+                            </Animator>
+                        </Link>
+                    </div>
 
                 </Animated>
             </Animator>
