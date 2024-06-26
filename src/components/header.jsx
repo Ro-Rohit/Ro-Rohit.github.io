@@ -38,7 +38,7 @@ const Header = ({ active, isScrolled }) => {
                         boxShadow: '3px 0 4px rgba(180,249,251,0.65)'
 
                     }}
-                        className="flex justify-center sm:justify-between  relative  items-center px-10 pt-4 pb-2.5"
+                        className="flex justify-center sm:justify-between  relative  items-center md:px-10 px-2 pt-4 pb-2.5"
                     >
 
                         <Animated animated={[aaVisibility()]} as="div" className="flex gap-x-5 z-10 relative items-center">
@@ -65,7 +65,7 @@ const Header = ({ active, isScrolled }) => {
                                 </Animator>
 
                                 <Animator active={active}>
-                                    <img className="object-cover  contrast-125 -translate-y-1   h-full" src={homeData.avator} alt="" />
+                                    <img className="object-cover   -translate-y-1   h-full" src={homeData.avator} alt="" />
                                 </Animator>
                             </a>
 

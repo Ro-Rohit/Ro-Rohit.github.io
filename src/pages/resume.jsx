@@ -78,7 +78,7 @@ const ResumePage = () => {
                                             {
                                                 skillsData.description.map((desc, idx) =>
                                                     <li key={idx}>
-                                                        <Text manager="sequence" as="p" style={{ color: theme.colors.secondary.main(1) }} className="font-secondary mb-1.5 font-normal text-lg leading-relaxed">
+                                                        <Text manager="sequence" as="p" style={{ color: theme.colors.secondary.text(1) }} className="font-secondary mb-1.5 font-normal text-lg leading-relaxed">
                                                             {desc}
                                                         </Text>
                                                     </li>
@@ -154,7 +154,7 @@ const ResumePage = () => {
 
                                         {
                                             EducationData.description.map((element, idx) =>
-                                                <div key={idx} className="flex gap-x-12 md:gap-x-6 items-center">
+                                                <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
                                                     <div
                                                         className="octagon relative"
                                                     >
@@ -183,7 +183,7 @@ const ResumePage = () => {
 
                                                     <div>
                                                         <Animator manager="parallel" active={active}>
-                                                            <Text as="h2" manager="sequence" style={{ color: theme.colors.secondary.main(2) }} className="md:text-[22px] font-normal font-primary mb-2.5 lg:text-[23px]">
+                                                            <Text as="h2" manager="sequence" style={{ color: theme.colors.secondary.main(2) }} className="text-[20px] md:text-[22px] font-normal font-primary mb-2.5 lg:text-[23px]">
                                                                 {element.title}
                                                             </Text>
 
@@ -233,7 +233,7 @@ const ResumePage = () => {
 
                                         {
                                             CoursesData.description.map((element, idx) =>
-                                                <div key={idx} className="flex gap-x-12 md:gap-x-6 items-center">
+                                                <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
                                                     <div
                                                         className="octagon relative"
                                                     >
@@ -243,8 +243,8 @@ const ResumePage = () => {
 
                                                         <div style={{
                                                             position: 'relative',
-                                                            height: 80,
-                                                            width: 80,
+                                                            height: 90,
+                                                            width: 90,
                                                         }}>
                                                             <Animator active={active}>
                                                                 <FrameSVGOctagon
