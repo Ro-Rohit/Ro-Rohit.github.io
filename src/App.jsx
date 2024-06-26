@@ -11,7 +11,7 @@ import ResumePage from './pages/resume';
 import Background from './components/background';
 
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = import.meta.env.NODE_ENV === 'production';
 
 const routeItem = [
   {
