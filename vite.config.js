@@ -7,9 +7,5 @@ export default defineConfig(({ command }) => {
     base: '/',
   };
 
-  if (command !== 'serve') {
-    config.base = '/my-vite-react-app/';
-  }
-
   return config;
 });

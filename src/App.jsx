@@ -2,7 +2,7 @@ import { Animator, BleepsProvider, } from '@arwes/react';
 import { AnimatorGeneralProvider, } from '@arwes/react';
 import { soundSettings, stylesBaseline, theme } from './utlis/settings';
 import { Global } from '@emotion/react';
-import { RouterProvider, createBrowserRouter, } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createHashRouter, } from 'react-router-dom';
 
 import HomePage from './pages/home';
 import ProjectPage from './pages/projects';
@@ -11,7 +11,7 @@ import ResumePage from './pages/resume';
 import Background from './components/background';
 
 
-const isDev = import.meta.env.DEV === 'production';
+const isProd = import.meta.env.PROD
 
 const routeItem = [
   {
@@ -28,7 +28,7 @@ const routeItem = [
   }
 ]
 
-const routes = createBrowserRouter(routeItem, { basename: isDev ? '/' : '/my-vite-react-app/' })
+const routes = isProd ? createHashRouter(routeItem) : createBrowserRouter(routeItem)
 
 
 
