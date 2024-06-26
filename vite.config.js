@@ -1,7 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
-  plugins: [react()],
-  base: '/',  // This is optional for user sites
+export default defineConfig(({ command }) => {
+  const config = {
+    plugins: [react()],
+    base: '/',
+  };
+
+  if (command !== 'serve') {
+    config.base = '/my-vite-react-app/';
+  }
+
+  return config;
 });

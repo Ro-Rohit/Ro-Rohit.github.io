@@ -1,7 +1,7 @@
 import { Animated, Animator, BleepsOnAnimator, FrameSVGOctagon, FrameSVGUnderline, Text, aa, aaFlicker, aaVisibility, useBleeps, useFrameSVGAssemblingAnimation } from "@arwes/react";
 import { useEffect, useRef, useState } from "react";
 import { octagonStyle, theme } from "../utlis/settings";
-import { socialLinksData } from "../data";
+import { homeData, socialLinksData } from "../data";
 
 const HomePage = () => {
     const svgRef = useRef(null);
@@ -27,7 +27,6 @@ const HomePage = () => {
         padding: theme.space(3),
         textAlign: 'center'
     }
-
     return (
         <section className="w-full   h-screen overflow-y-auto md:overflow-hidden flex flex-col gap-y-2 justify-center items-center">
             <Animator active={active} manager='stagger'>
@@ -51,7 +50,7 @@ const HomePage = () => {
                     </Animator>
 
                     <Animator active={active}>
-                        <img className="object-cover  contrast-125  scale-105   rounded-lg  h-full" src="../src/assets/leo.png" alt="" />
+                        <img className="object-cover  contrast-125  scale-105   rounded-lg  h-full" src={homeData.avator} alt="leo" />
                     </Animator>
                 </div>
             </Animator>
@@ -67,7 +66,7 @@ const HomePage = () => {
 
                     className="text-center text-3xl font-primary font-bold uppercase"
                 >
-                    Rohit singh
+                    {homeData.name}
                 </Text>
             </Animator>
 
@@ -77,7 +76,9 @@ const HomePage = () => {
                     continuous
                 />
                 <Text as="p" manager="sequence" style={{ color: theme.colors.primary.text(1) }} className="max-w-[500px] px-2 w-full font-secondary text-center leading-relaxed hover:mix-blend-plus-lighter transition-all duration-150">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas laboriosam veritatis quod, cum suscipit
+                    {homeData.point1}
+                    {homeData.point2}
+                    {homeData.point3}
                 </Text>
             </Animator>
 

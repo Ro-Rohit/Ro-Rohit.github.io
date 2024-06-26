@@ -1,3 +1,11 @@
+export const homeData = {
+    avator: "./assets/leo.png",
+    name: 'Rohit singh',
+    point1: 'Full Stack Developer.',
+    point2: 'Next.js, React.js, Node.js, Figma.',
+    point3: 'Exploring new tech and open source.',
+}
+
 export const resumeData = {
     summaryData: {
         title: 'Summary',
@@ -25,48 +33,48 @@ export const resumeData = {
         title: 'Technologies',
         techImages: [
             {
-                url: "../src/assets/nextjs.svg",
+                url: "./assets/nextjs.svg",
                 name: "Nextjs ",
             },
 
             {
-                url: "../src/assets/react.svg",
+                url: "./assets/react.svg",
                 name: "react ",
             },
 
             {
-                url: "../src/assets/nodejs.svg",
+                url: "./assets/nodejs.svg",
                 name: "nodejs ",
             },
 
             {
-                url: "../src/assets/mongodb.svg",
+                url: "./assets/mongodb.svg",
                 name: "mongodb ",
             },
 
             {
-                url: "../src/assets/docker.svg",
+                url: "./assets/docker.svg",
                 name: "docker ",
             },
 
 
             {
-                url: "../src/assets/figma.svg",
+                url: "./assets/figma.svg",
                 name: "Figma ",
             },
 
 
             {
-                url: "../src/assets/flutter.svg",
+                url: "./assets/flutter.svg",
                 name: "Flutter ",
             },
 
             {
-                url: "../src/assets/ts.svg",
+                url: "./assets/ts.svg",
                 name: "typescript ",
             },
             {
-                url: "../src/assets/aws.svg",
+                url: "./assets/aws.svg",
                 name: "AWS",
             },
 
@@ -77,7 +85,7 @@ export const resumeData = {
         title: 'Education',
         description: [
             {
-                image: '../src/assets/ai.png',
+                image: './assets/ai.png',
                 alt: 'college',
                 title: 'Bachelor of Computer Application',
                 date: 'Expected 2025, Raipur India',
@@ -86,7 +94,7 @@ export const resumeData = {
                 linkText: 'Govt. Nagarjuna science College',
             },
             {
-                image: '../src/assets/ai2.png',
+                image: './assets/ai2.png',
                 alt: 'school',
                 title: 'AISSC Examination',
                 date: '2019 - 2020, Raipur India',
@@ -102,7 +110,7 @@ export const resumeData = {
         title: 'Course',
         description: [
             {
-                image: '../src/assets/udemy.png',
+                image: './assets/udemy.png',
                 alt: 'udemy',
                 title: 'AWS Cloud Practitioner',
                 linkText: 'udemy.com',
@@ -110,7 +118,7 @@ export const resumeData = {
                 date: 'learning',
             },
             {
-                image: '../src/assets/domestica.png',
+                image: './assets/domestica.png',
                 alt: 'domestica',
                 title: 'Design System for Websites',
                 linkText: 'Domestica.com',
@@ -119,7 +127,7 @@ export const resumeData = {
             },
             {
 
-                image: '../src/assets/udemy.png',
+                image: './assets/udemy.png',
                 alt: 'udemy',
                 title: 'Complete NodeJs Backened Development',
                 linkText: 'udemy.com',
@@ -127,7 +135,7 @@ export const resumeData = {
                 href: 'https://www.udemy.com/certificate/UC-01e0f7aa-ce79-4b38-a737-836ed607dc34/',
             },
             {
-                image: '../src/assets/domestica.png',
+                image: './assets/domestica.png',
                 alt: 'domestica',
                 title: 'Introduction to UI Design',
                 linkText: 'Domestica.com',
@@ -136,7 +144,7 @@ export const resumeData = {
             },
 
             {
-                image: '../src/assets/udemy.png',
+                image: './assets/udemy.png',
                 alt: 'udemy',
                 title: 'Mastering Linux: The Comprehensive Guide',
                 linkText: 'udemy.com',
@@ -146,7 +154,7 @@ export const resumeData = {
 
 
             {
-                image: '../src/assets/udemy.png',
+                image: './assets/udemy.png',
                 alt: 'udemy',
                 title: 'Master the Coding Interview: Data Structures + Algorithms',
                 linkText: 'udemy.com',
@@ -154,7 +162,7 @@ export const resumeData = {
                 date: 'June 2023',
             },
             {
-                image: '../src/assets/udemy.png',
+                image: './assets/udemy.png',
                 alt: 'udemy',
                 title: 'The complete  web development bootcamp',
                 linkText: 'udemy.com',
@@ -163,7 +171,7 @@ export const resumeData = {
             },
 
             {
-                image: '../src/assets/udemy.png',
+                image: './assets/udemy.png',
                 alt: 'udemy',
                 title: 'The Complete Flutter Development Bootcamp with Dart',
                 linkText: 'udemy.com',
@@ -222,7 +230,7 @@ export const projectData = [
     {
         title: 'Ecommerce Dashboard Design',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/dashboard.jpg',
+        image: './assets/dashboard.jpg',
         date: 'March 2021',
         effort: 'Low effort',
         work: 'code',
@@ -232,7 +240,7 @@ export const projectData = [
     {
         title: 'Real State Starter',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/real-state-starter.png',
+        image: './assets/real-state-starter.png',
         date: 'Jan 2023',
         effort: 'Low effort',
         work: 'code',
@@ -242,7 +250,7 @@ export const projectData = [
     {
         title: 'Data Warehouse',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/data-warehouse.png',
+        image: './assets/data-warehouse.png',
         date: 'September 2022',
         effort: 'Low effort',
         work: 'design',
@@ -253,7 +261,7 @@ export const projectData = [
     {
         title: 'Photography Starter',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/photography.png',
+        image: './assets/photography.png',
         date: 'June 2022',
         effort: 'Low effort',
         work: 'code',
@@ -264,7 +272,7 @@ export const projectData = [
     {
         title: 'Neutar Starter',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/neutar.png',
+        image: './assets/neutar.png',
         date: 'feb 2022',
         effort: 'Low effort',
         work: 'design',
@@ -275,7 +283,7 @@ export const projectData = [
     {
         title: 'SCI-FI Web Starter',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/sci-fi.png',
+        image: './assets/sci-fi.png',
         date: 'Nov 2021',
         effort: 'Low effort',
         work: 'code',
@@ -285,7 +293,7 @@ export const projectData = [
     {
         title: 'Trafico Starter',
         description: 'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
-        image: '../src/assets/trafico.png',
+        image: './assets/trafico.png',
         date: 'March 2021',
         effort: 'Low effort',
         work: 'code',
