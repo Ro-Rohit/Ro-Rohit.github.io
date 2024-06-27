@@ -122,7 +122,7 @@ export const resumeData = {
                 alt: 'domestica',
                 title: 'Design System for Websites',
                 linkText: 'Domestica.com',
-                href: 'www.domestica.com',
+                href: '#',
                 date: 'Feb 2022',
             },
             {

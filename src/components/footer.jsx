@@ -71,7 +71,6 @@ const Footer = ({ active }) => {
         event.preventDefault();
 
         if (formRef.current) {
-            console.log(formRef.current)
             const res = await sendEmail(formRef.current)
             displayMessage(res.status)
         }
@@ -129,7 +128,7 @@ const Footer = ({ active }) => {
 
                             <Animator active={true}>
                                 <div style={{ backgroundColor: theme.colors.primary.deco(0) }} className=" pl-5 pt-4 pb-1 mb-5 overflow-hidden  h-full w-full">
-                                    <textarea required minLength={20} style={{ color: theme.colors.primary.text(0) }} placeholder="Say Hii 👋🏻" className="resize-none placeholder:text-white/90 placeholder:lowercase font-secondary font-medium text-[17px]  bg-transparent  pr-2 leading-relaxed overflow-y-auto outline-none h-full w-full" />
+                                    <textarea name="message" inputMode="text" required minLength={4} style={{ color: theme.colors.primary.text(0) }} placeholder="Say Hii 👋🏻" className="resize-none placeholder:text-white/90 placeholder:lowercase font-secondary font-medium text-[17px]  bg-transparent  pr-2 leading-relaxed overflow-y-auto outline-none h-full w-full" />
                                 </div>
 
                             </Animator>

@@ -152,11 +152,11 @@ const ResumePage = () => {
                                     </Animator>
                                     <Animator combine merge manager="stagger" active={active}>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 ">
+                                        <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 ">
 
                                             {
                                                 EducationData.description.map((element, idx) =>
-                                                    <div key={idx} className="flex gap-x-4 md:gap-x-6 items-center">
+                                                    <div key={idx} className="flex gap-x-4 md:gap-x-6 items-start">
                                                         <div
                                                             className="octagon relative"
                                                         >

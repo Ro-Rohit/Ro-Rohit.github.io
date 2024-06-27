@@ -4,7 +4,7 @@ import { Animated, Animator, BleepsOnAnimator, FrameSVGOctagon, Text, aaOpacity,
 import AnimationInView, { AnimatorUIListener } from "../components/animate-view";
 import HeadingComponent from "../components/heading";
 import NefraxFrame from "../components/nefrax-frame";
-import { projectData } from "../data";
+import { projectData, socialLinksData } from "../data";
 import Footer from "../components/footer";
 import { octagonStyle, theme } from "../utlis/settings";
 import useScreenWidth from "../hook/use-screen-width";
@@ -46,7 +46,7 @@ const ProjectPage = () => {
                                 <HeadingComponent title="Projects" active={active} />
                             </Animated>
 
-                            <a href={"#"} target="_blank" onMouseEnter={() => bleeps.click?.play()} className="octagon hidden sm:block cursor-pointer" style={{
+                            <a href={socialLinksData[1].href} target="_blank" onMouseEnter={() => bleeps.click?.play()} className="octagon hidden sm:block cursor-pointer" style={{
                                 position: 'relative',
                                 height: 50,
                                 width: 150,

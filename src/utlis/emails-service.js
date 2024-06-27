@@ -7,7 +7,6 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
 
 export const sendEmail = async (formData) => {
-    console.log(SERVICE_ID)
     if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) return await
         emailjs.sendForm(
             SERVICE_ID, TEMPLATE_ID,
