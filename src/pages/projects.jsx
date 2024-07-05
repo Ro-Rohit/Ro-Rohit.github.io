@@ -83,7 +83,7 @@ const ProjectPage = () => {
                                                     <img style={{ borderColor: 'hsl(60, 75%, 50%)' }} className="w-full max-h-[450px] h-full border-b-4 object-cover object-top" src={project.image} alt="image" />
                                                 </Animator>
                                                 <Animator duration={{ enter: 2 }}>
-                                                    <BleepsOnAnimator continuous transitions={{ entering: 'type' }} />
+                                                    <BleepsOnAnimator continuous transitions={{ entering: 'typeLong' }} />
                                                     <div style={{ backgroundColor: theme.colors.info.deco(10) }} className="w-full text-center sm:text-left  my-1  py-4 px-4">
 
                                                         <Text as="h1" style={{ color: `hsla(60,75%,55%,1)` }} className="font-primary mb-4 text-2xl fontLight">

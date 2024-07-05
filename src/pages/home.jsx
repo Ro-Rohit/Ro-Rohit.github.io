@@ -77,7 +77,7 @@ const HomePage = () => {
 
             {/* about  */}
             <Animator active={active} duration={{ delay: 1, enter: 1, exit: 0.4 }}>
-                <BleepsOnAnimator transitions={{ entering: 'type' }}
+                <BleepsOnAnimator transitions={{ entering: 'typeLong' }}
                     continuous
                 />
                 <ul className="max-w-[500px]  text-[16px]  gap-x-3 justify-center items-center flex-wrap px-2 w-full font-secondary text-center leading-relaxed hover:mix-blend-plus-lighter transition-all duration-150">

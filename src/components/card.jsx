@@ -1,18 +1,18 @@
 import {
-    useBleeps,
     Animated,
     FrameSVGCorners,
     aa,
     aaVisibility,
-    Animator
+    Animator,
+    BleepsOnAnimator
 } from '@arwes/react';
 
 
 const Card = ({ theme, children }) => {
-    const bleeps = useBleeps();
 
     return (
         <Animator merge combine manager='stagger'>
+            <BleepsOnAnimator continuous transitions={{ "entered": 'clickHeader' }} />
             <Animated
                 className='card mt-[80px] mx-2 sm:mx-0 mb-[200px]'
                 style={{
@@ -23,7 +23,6 @@ const Card = ({ theme, children }) => {
                     textAlign: 'left'
                 }}
                 animated={[aaVisibility(), aa('y', '2rem', 0)]}
-                onClick={() => bleeps.click?.play()}
             >
                 <style>{`
                     .card .arwes-react-frames-framesvg [data-name=bg] {

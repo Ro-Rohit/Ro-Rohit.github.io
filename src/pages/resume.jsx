@@ -43,7 +43,7 @@ const ResumePage = () => {
             <AnimationInView>
                 <BleepsOnAnimator continuous transitions={{ entering: 'intro', }} />
                 <div ref={divRef} className="pt-[120px] h-screen   overflow-y-scroll">
-                    <div className="max-w-[1000px] md:px-10 px-2 mb-[150px] w-full mx-auto">
+                    <div className="max-w-[1000px] md:px-10 px-2 space-y-[150px] mb-[150px] w-full mx-auto">
 
                         {/* intro title  */}
                         <Animator>
@@ -140,7 +140,6 @@ const ResumePage = () => {
                         <Animator>
                             <AnimatorUIListener>
                                 <HeadingComponent title={EducationData.title} active={active} />
-                                <BleepsOnAnimator continuous transitions={{ entering: 'typeShort', }} />
 
                                 <Card theme={theme}>
                                     <Animator>
@@ -218,7 +217,6 @@ const ResumePage = () => {
                         <Animator>
                             <AnimatorUIListener>
                                 <HeadingComponent title={CoursesData.title} active={active} />
-                                <BleepsOnAnimator continuous transitions={{ entering: 'typeShort', }} />
 
                                 <Card theme={theme}>
                                     <Animator>

@@ -118,7 +118,7 @@ const Footer = ({ active }) => {
             <Animator manager="stagger" active={active}>
                 <form ref={formRef} onSubmit={handleSubmit} className="h-full w-full max-w-[800px] md:mr-auto mx-auto">
                     <Animator active={active}>
-                        <BleepsOnAnimator continuous transitions={{ entering: 'type' }} />
+                        <BleepsOnAnimator continuous transitions={{ entering: 'typeLong' }} />
                         <Text
                             style={{ color: theme.colors.primary.text(1), textShadow: '0 0 4px rgba(180,249,251,0.65)', }}
                             className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1"

@@ -35,7 +35,14 @@ const routes = isProd ? createHashRouter(routeItem) : createBrowserRouter(routeI
 
 const App = () => (
   <>
-    <Global styles={{ ...stylesBaseline, 'a:hover': { color: 'hsla(180,75%,50%,1)' }, '.underline:hover': { color: 'hsla(180,75%,50%,1)' }, }} />
+    <Global styles={
+      {
+        ...stylesBaseline,
+        'a:hover': { color: 'hsla(180,75%,50%,1)' },
+        '.underline:hover': { color: 'hsla(180,75%,50%,1)' },
+        '.underline': { color: 'hsla(180,50%,90%,1)' }
+      }}
+    />
     <AnimatorGeneralProvider duration={{ enter: 1, exit: 1, stagger: 0.2 }}>
       <BleepsProvider  {...soundSettings}>
         <Animator active={true} combine manager='stagger'>
