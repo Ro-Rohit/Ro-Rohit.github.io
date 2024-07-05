@@ -82,11 +82,6 @@ export const soundSettings = {
         clickLink: {
             sources: [{ src: 'https://arwes.dev/assets/sounds/click.mp3', type: 'audio/mpeg' }]
         },
-        intro: {
-            sources: [
-                { src: 'https://arwes.dev/assets/sounds/intro.mp3', type: 'audio/mpeg' }
-            ]
-        },
 
         clickHeader: {
             sources: [{ src: './sounds/click.mp3', type: 'audio/mpeg' }]
