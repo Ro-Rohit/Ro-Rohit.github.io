@@ -4,10 +4,10 @@
 
 :root, html, body{
   height: 100%;
-  scrollbar-color: hsla(60,75%,50%,1) transparent !important;
+  scrollbar-color: hsla(191,78%,50%,1) transparent !important;
 }
 
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(60, 75%, 50%) transparent !important;
+  background-color: hsl(190, 78%, 50%) transparent !important;
 }

@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import { octagonStyle, theme } from "../utlis/settings";
 import useScreenWidth from "../hook/use-screen-width";
 
+
 const ProjectPage = () => {
     const svgRef = useRef(null);
     const { onRender } = useFrameSVGAssemblingAnimation(svgRef);

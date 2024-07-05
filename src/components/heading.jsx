@@ -12,6 +12,7 @@ const HeadingComponent = ({ title, }) => {
                 height: 45,
                 textAlign: 'center',
                 padding: theme.space(1.4),
+
             }}
 
         >

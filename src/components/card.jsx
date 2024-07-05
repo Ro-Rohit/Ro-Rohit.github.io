@@ -30,8 +30,8 @@ const Card = ({ theme, children }) => {
                     color: ${theme.colors.primary.deco(3)};
                     }
                     .card .arwes-react-frames-framesvg [data-name=line] {
-                        color: hsl(60, 75%, 50%);
-                        filter: drop-shadow(0 0 4px hsl(60, 75%, 50%))                    }
+                        color: hsl(180, 75%, 50%);
+                        filter: drop-shadow(0 0 4px hsl(180, 75%, 50%))                    }
                 `}
                 </style>
 

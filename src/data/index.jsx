@@ -65,8 +65,8 @@ export const resumeData = {
 
 
             {
-                url: "./assets/flutter.svg",
-                name: "Flutter ",
+                url: "./assets/tailwind.svg",
+                name: "Tailwindcss ",
             },
 
             {

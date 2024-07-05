@@ -9,6 +9,7 @@ import ProjectPage from './pages/projects';
 import ResumePage from './pages/resume';
 
 import Background from './components/background';
+import Lighter from './components/illuminator';
 
 
 const isProd = import.meta.env.PROD
@@ -34,13 +35,18 @@ const routes = isProd ? createHashRouter(routeItem) : createBrowserRouter(routeI
 
 const App = () => (
   <>
-    <Global styles={{ ...stylesBaseline, }} />
+    <Global styles={{ ...stylesBaseline, 'a:hover': { color: 'hsla(180,75%,50%,1)' }, '.underline:hover': { color: 'hsla(180,75%,50%,1)' }, }} />
     <AnimatorGeneralProvider duration={{ enter: 1, exit: 1, stagger: 0.2 }}>
       <BleepsProvider  {...soundSettings}>
         <Animator active={true} combine manager='stagger'>
 
           <Animator>
             <Background theme={theme} />
+          </Animator>
+
+
+          <Animator>
+            <Lighter />
           </Animator>
 
 

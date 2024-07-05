@@ -182,11 +182,11 @@ const ResumePage = () => {
                                                         </div>
 
                                                         <div>
-                                                            <Text as="h2" style={{ color: theme.colors.success.main(3) }} className="text-[20px] md:text-[22px] font-normal font-primary mb-2.5 lg:text-[23px]">
+                                                            <Text as="h2" style={{ color: `hsla(180, 78%, 50%, 1)` }} className="text-[20px] md:text-[22px] font-normal font-primary mb-2.5 lg:text-[23px]">
                                                                 {element.title}
                                                             </Text>
 
-                                                            <Text as="a" target="_blank" className=" font-thin font-secondary text-[17px]" style={{ color: theme.colors.secondary.main(1), }} href={element.href}>
+                                                            <Text as="a" target="_blank" className=" font-thin font-secondary text-[17px]" style={{ color: theme.colors.primary.main(2) }} href={element.href}>
                                                                 {element.linkText}
                                                                 <svg className=" ml-1 mb-0.5 size-6 inline-block stroke-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >
                                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -258,7 +258,7 @@ const ResumePage = () => {
                                                         </div>
 
                                                         <div className="font-secondary ">
-                                                            <Text as="h2" style={{ color: `hsl(60, 75%, 65%)` }} className="text-[18px] font-primary tracking-wide font-normal mb-2 md:text-[20px]">
+                                                            <Text as="h2" style={{ color: `hsl(180, 75%, 65%)` }} className="text-[18px] font-primary tracking-wide font-normal mb-2 md:text-[20px]">
                                                                 {element.title}
                                                             </Text>
 
@@ -290,7 +290,7 @@ const ResumePage = () => {
                             <AnimatorUIListener>
                                 <BleepsOnAnimator continuous transitions={{ entering: 'type', }} />
                                 <HeadingComponent title={LanguageData.title} active={active} />
-                                <blockquote className="mt-10 mb-[200px]" data-arwes-global-palette='info'>
+                                <blockquote className="mt-10 mb-[200px]" data-arwes-global-palette='primary'>
                                     <ul>
                                         {LanguageData.description.map((element, idx) =>
                                             <li key={idx}>
@@ -311,7 +311,7 @@ const ResumePage = () => {
                         <Animator>
                             <AnimatorUIListener>
                                 <HeadingComponent title={InterestData.title} active={active} />
-                                <blockquote className="my-10" data-arwes-global-palette='info'>
+                                <blockquote className="my-10" data-arwes-global-palette='primary'>
                                     <ul>
                                         {InterestData.description.map((element, idx) =>
                                             <li key={idx}>

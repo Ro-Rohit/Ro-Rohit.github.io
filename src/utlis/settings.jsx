@@ -33,9 +33,6 @@ export const underlineStyle = `
     color: ${theme.colors.primary.deco(2)};
 
 },
-.underline .arwes-react-frames-framesvgunderline [data-name=line] {
-    color: hsl(60, 75%, 50%);
-}
 `
 
 
