@@ -16,8 +16,12 @@ const HomePage = () => {
     }, []);
 
 
-    const hoverSound = () => {
-        bleeps.click.play()
+    const playSoundLink = () => {
+        bleeps.clickLink.play()
+    }
+
+    const playSoundHeader = () => {
+        bleeps.clickHeader.play()
     }
 
 
@@ -65,7 +69,7 @@ const HomePage = () => {
                     easing='outSine'
                     fixed
 
-                    className="text-center text-3xl font-primary font-bold uppercase"
+                    className="text-center mb-1.5 text-3xl font-primary font-bold uppercase"
                 >
                     {homeData.name}
                 </Text>
@@ -76,11 +80,11 @@ const HomePage = () => {
                 <BleepsOnAnimator transitions={{ entering: 'type' }}
                     continuous
                 />
-                <ul className="max-w-[500px] mb-2 text-[16px]  gap-x-3 justify-center items-center flex-wrap px-2 w-full font-secondary text-center leading-relaxed hover:mix-blend-plus-lighter transition-all duration-150">
+                <ul className="max-w-[500px]  text-[16px]  gap-x-3 justify-center items-center flex-wrap px-2 w-full font-secondary text-center leading-relaxed hover:mix-blend-plus-lighter transition-all duration-150">
                     <Text as="p" style={{ color: theme.colors.primary.text(1) }}>
                         {homeData.point1}
                     </Text>
-                    <Text as="p" className="uppercase text-[15px] tracking-wider  font-medium" style={{ color: theme.colors.primary.text(1) }}>
+                    <Text as="p" className="uppercase text-[15px] tracking-wider  font-semibold" style={{ color: theme.colors.primary.text(1), wordSpacing: '5px' }}>
                         {homeData.point2}
                     </Text>
 
@@ -93,7 +97,7 @@ const HomePage = () => {
                 <Animated animated={[aaVisibility(), aaFlicker()]} className="flex flex-wrap justify-center mt-2 mb-4 gap-x-6 gap-y-1 items-center">
                     {
                         socialLinksData.map((element, idx) =>
-                            <a key={idx} target='_blank' onMouseEnter={hoverSound} href={element.href} className="flex items-center gap-x-2">
+                            <a key={idx} target='_blank' onMouseEnter={playSoundLink} href={element.href} className="flex items-center gap-x-2">
                                 {element.icon}
                                 <h6 style={{ color: theme.colors.primary.text(1) }} className=" font-secondary uppercase font-light text-sm">{element.text}</h6>
                             </a>
@@ -107,7 +111,7 @@ const HomePage = () => {
                 <Animated as="div" className="flex flex-wrap justify-center max-w-[500px] w-full px-3    items-center gap-x-6 md:gap-x-16 gap-y-4" animated={[aaVisibility(), aa('y', '2rem', 0)]}  >
 
                     <div
-                        onMouseEnter={hoverSound}
+                        onMouseEnter={playSoundHeader}
                         className='underline flex-1 w-full'
                         style={{
                             position: 'relative',
@@ -154,7 +158,7 @@ const HomePage = () => {
 
 
                     <div
-                        onMouseEnter={hoverSound}
+                        onMouseEnter={playSoundHeader}
                         className='underline flex-1 w-full max-w-[170px]'
                         style={{
                             position: 'relative',

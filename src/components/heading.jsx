@@ -1,10 +1,13 @@
-import { Animated, Animator, Text, FrameSVGUnderline, aaFlicker, aaVisibility } from "@arwes/react"
+import { Animated, Animator, Text, FrameSVGUnderline, aaFlicker, aaVisibility, useBleeps } from "@arwes/react"
 import { theme, underlineStyle } from "../utlis/settings";
 
 const HeadingComponent = ({ title, }) => {
+    const bleeps = useBleeps();
+
 
     return (
         <Animated
+            onMouseEnter={() => bleeps.clickHeader.play()}
             animated={[aaVisibility(), aaFlicker()]}
             className='underline mt-6 mx-auto sm:mx-0 w-[220px]'
             style={{

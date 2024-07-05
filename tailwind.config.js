@@ -17,14 +17,14 @@ export default {
       },
       keyframes: {
         'sine-wave': {
-          '0%': { transform: 'translateX(10px) rotate(45deg)', stroke: 'hsl(60, 75%, 50%)', opacity: 1, },
+          '0%': { transform: 'translateX(10px) rotate(45deg)', opacity: 1, },
           '50%': { transform: 'translateX(130px) rotate(45deg)', opacity: 0 },
 
           '100%': { transform: 'translateX(160px) rotate(45deg)', opacity: 0 },
         },
       },
       animation: {
-        'sine-wave': 'sine-wave 1.3s  infinite cubic-bezier(0.45, 0, 0.55, 1)',
+        'sine-wave': 'sine-wave 1.5s  infinite cubic-bezier(0.45, 0, 0.55, 1)',
       },
     },
   },

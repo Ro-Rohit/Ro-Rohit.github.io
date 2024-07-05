@@ -79,11 +79,19 @@ export const soundSettings = {
     },
 
     bleeps: {
-        click: {
+        clickLink: {
+            sources: [{ src: 'https://arwes.dev/assets/sounds/click.mp3', type: 'audio/mpeg' }]
+        },
+        intro: {
             sources: [
-                { src: 'https://arwes.dev/assets/sounds/click.mp3', type: 'audio/mpeg' }
+                { src: 'https://arwes.dev/assets/sounds/intro.mp3', type: 'audio/mpeg' }
             ]
         },
+
+        clickHeader: {
+            sources: [{ src: './sounds/click.mp3', type: 'audio/mpeg' }]
+        },
+
         intro: {
             sources: [
                 { src: 'https://arwes.dev/assets/sounds/intro.mp3', type: 'audio/mpeg' }
@@ -98,9 +106,23 @@ export const soundSettings = {
             sources: [{ src: 'https://arwes.dev/assets/sounds/info.mp3', type: 'audio/mpeg' }]
         },
 
-        type: {
+        typeLong: {
             sources: [{ src: 'https://arwes.dev/assets/sounds/type.mp3', type: 'audio/mpeg' }]
         },
+
+
+        typeShort: {
+            sources: [{ src: './sounds/typing.mp3', type: 'audio/mpeg' }]
+        },
+
+        success: {
+            sources: [{ src: './sounds/success.mp3', type: 'audio/mpeg' }]
+        },
+
+        abort: {
+            sources: [{ src: './sounds/abort.mp3', type: 'audio/mpeg' }]
+        },
+
     }
 };
 

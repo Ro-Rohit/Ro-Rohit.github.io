@@ -20,6 +20,7 @@ const ProjectPage = () => {
     const screenWidth = useScreenWidth();
 
 
+
     const handleScroll = (event) => {
         event.target.scrollTop > 66 ? setScroll(true) : setScroll(false)
     }
@@ -115,7 +116,7 @@ const ProjectPage = () => {
 
 
 
-                                                        <button className="border-[1px] py-2.5 px-1 bg-transparent border-[hsla(80,91%,83.06%,1)]" tabIndex="-1" >
+                                                        <button onMouseEnter={() => bleeps.clickLink?.play()} className="border-[1px] py-2.5 px-1 bg-transparent border-[hsla(80,91%,83.06%,1)]" tabIndex="-1" >
                                                             <Animator>
                                                                 <a href={project.link} target="_blank" style={{ color: theme.colors.info.bg(0), }} className="py-2 px-5 bg-[#cee9e9] hover:bg-[#f4dcff] transition-all duration-300  font-primary uppercase">
                                                                     {idx === 0 ? 'working' : 'see more'}

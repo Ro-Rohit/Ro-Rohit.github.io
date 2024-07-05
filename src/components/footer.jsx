@@ -1,4 +1,4 @@
-import { Animated, Animator, BleepsOnAnimator, FrameSVGKranox, FrameSVGLines, FrameSVGOctagon, Text, aaOpacity, useFrameSVGAssemblingAnimation } from "@arwes/react";
+import { Animated, Animator, BleepsOnAnimator, FrameSVGKranox, FrameSVGLines, FrameSVGOctagon, Text, aaOpacity, useBleeps, useFrameSVGAssemblingAnimation } from "@arwes/react";
 import { useRef, useState } from "react";
 import { kranoxStyle, linesStyle, octagonStyle, theme } from "../utlis/settings";
 import { socialLinksData } from "../data";
@@ -17,13 +17,13 @@ const SocialFrame = () => {
 }
 
 const SocialLinks = ({ active }) => {
-
+    const bleeps = useBleeps();
     return (
         <div className="flex items-center gap-x-6">
             {
                 socialLinksData.map((element, idx) =>
 
-                    <a target='_blank' onMouseEnter={() => bleeps.click?.play()} href={element.href} key={idx} className="octagon even:hover:rotate-12 odd:hover:-rotate-12 transition-all duration-500" style={{
+                    <a target='_blank' onMouseEnter={() => bleeps.clickLink?.play()} href={element.href} key={idx} className="octagon even:hover:rotate-12 odd:hover:-rotate-12 transition-all duration-500" style={{
                         position: 'relative',
                         height: 50,
                         width: 54,
@@ -35,7 +35,7 @@ const SocialLinks = ({ active }) => {
                         <SocialFrame />
 
                         <Animator active={active}>
-                            <div className=" translate-x-3.5 translate-y-3.5" >
+                            <div className=" translate-x-[15px] translate-y-3.5" >
                                 {element.icon}
                             </div>
                         </Animator>
@@ -57,14 +57,14 @@ const Footer = ({ active }) => {
     const svgRef2 = useRef(null);
     const renderer = useFrameSVGAssemblingAnimation(svgRef2);
 
-    const SUCCESS_MESSAGE = 'Thankyou for contact me.'
+    const SUCCESS_MESSAGE = "Thanks for your message! I appreciate you reaching out. Let’s chat soon."
     const FAILURE_MESSAGE = 'Something went wrong.'
 
     const formRef = useRef(null);
     const [message, setMessage] = useState(null);
     const [loading, setLoading] = useState(false);
 
-
+    const bleeps = useBleeps();
 
     const handleSubmit = async (event) => {
         setLoading(true);
@@ -80,17 +80,20 @@ const Footer = ({ active }) => {
     }
 
     const displayMessage = (status) => {
-        status === 200
-            ? setMessage(SUCCESS_MESSAGE)
-            : setMessage(FAILURE_MESSAGE);
+        if (status !== 200) {
+            setMessage(FAILURE_MESSAGE);
+            bleeps.clickHeader.stop();
+            bleeps.abort?.play();
+        } else {
+            setMessage(SUCCESS_MESSAGE)
+            bleeps.clickHeader.stop();
+            bleeps.success?.play();
+        }
 
         setTimeout(() => {
             setMessage(null)
         }, 15000);
     }
-
-
-
 
 
 
@@ -116,7 +119,12 @@ const Footer = ({ active }) => {
                 <form ref={formRef} onSubmit={handleSubmit} className="h-full w-full max-w-[800px] md:mr-auto mx-auto">
                     <Animator active={active}>
                         <BleepsOnAnimator continuous transitions={{ entering: 'type' }} />
-                        <Text style={{ color: theme.colors.secondary.main(1) }} className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1">Let's connect</Text>
+                        <Text
+                            style={{ color: theme.colors.primary.text(1), textShadow: '0 0 4px rgba(180,249,251,0.65)', }}
+                            className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1"
+                        >
+                            Let's connect
+                        </Text>
                     </Animator>
 
                     {/* input for email */}
@@ -138,7 +146,17 @@ const Footer = ({ active }) => {
 
                             <Animator active={true}>
                                 <div style={{ backgroundColor: theme.colors.primary.deco(0) }} className=" pl-5 pt-4 pb-1 mb-5 overflow-hidden  h-full w-full">
-                                    <textarea name="message" inputMode="text" required minLength={4} style={{ color: theme.colors.primary.text(0) }} placeholder="Say Hii 👋🏻" className="resize-none placeholder:text-white/90 placeholder:lowercase font-secondary font-medium text-[17px]  bg-transparent  pr-2 leading-relaxed overflow-y-auto outline-none h-full w-full" />
+                                    <textarea
+                                        name="message"
+                                        inputMode="text"
+                                        required
+                                        minLength={4}
+                                        style={{ color: theme.colors.primary.text(0) }}
+                                        placeholder="Let's create something amazing together! 👋🏻"
+                                        className="resize-none  placeholder:text-white/80  
+                                        font-secondary font-medium text-[17px]  bg-transparent  pr-2 
+                                        leading-relaxed overflow-y-auto outline-none h-full w-full"
+                                    />
                                 </div>
 
                             </Animator>
@@ -150,9 +168,14 @@ const Footer = ({ active }) => {
 
                     <div className="flex flex-col max-w-[500px] w-full md:flex-row items-center justify-center md:justify-between">
                         {/* button  */}
-                        <div className="kranox mb-6">
+                        <div className="kranox flex md:block items-center  flex-col text-center mt-2">
                             <style>{kranoxStyle}</style>
-                            <button disabled={loading} type="submit" style={{ position: "relative", height: 50, width: 150, padding: theme.space([0, 0]), textAlign: 'center' }}>
+                            <button
+                                onMouseEnter={() => bleeps.clickHeader?.play()}
+                                disabled={loading}
+                                type="submit"
+                                style={{ position: "relative", height: 50, width: 150, padding: theme.space([0, 0]), textAlign: 'center' }}
+                            >
                                 <FrameSVGKranox
                                     elementRef={svgRef2}
                                     onRender={renderer.onRender}
@@ -182,8 +205,9 @@ const Footer = ({ active }) => {
 
 
                             </button>
-                            <Text className="mt-2" as="p">{message}</Text>
+                            <Text className="my-4 font-secondary text-sm  md:hidden" as="p">{message}</Text>
                         </div>
+
 
 
 
@@ -192,6 +216,8 @@ const Footer = ({ active }) => {
                             <SocialLinks active={active} />
                         </Animator>
                     </div>
+
+                    <Text className="translate-y-8 font-secondary hidden md:block text-left md:text-center" as="p">{message}</Text>
                 </form>
             </Animator>
 

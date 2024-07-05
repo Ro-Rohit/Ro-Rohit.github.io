@@ -52,7 +52,7 @@ const ResumePage = () => {
 
                                 <NefraxFrame >
                                     <Animator>
-                                        <BleepsOnAnimator continuous transitions={{ entering: 'type', }} />
+                                        <BleepsOnAnimator continuous transitions={{ entering: 'typeLong', }} />
                                         <Text as="p" style={{ color: theme.colors.secondary.text(0) }} className="font-secondary  font-medium text-lg leading-relaxed">
                                             {summaryData.description}
                                         </Text>
@@ -73,7 +73,7 @@ const ResumePage = () => {
                                 <HeadingComponent title={skillsData.title} />
                                 <NefraxFrame>
                                     <Animator>
-                                        <BleepsOnAnimator continuous transitions={{ entering: 'type', }} />
+                                        <BleepsOnAnimator continuous transitions={{ entering: 'typeLong', }} />
                                         <ul>
                                             {
                                                 skillsData.description.map((desc, idx) =>
@@ -140,7 +140,7 @@ const ResumePage = () => {
                         <Animator>
                             <AnimatorUIListener>
                                 <HeadingComponent title={EducationData.title} active={active} />
-                                <BleepsOnAnimator continuous transitions={{ entering: 'type', }} />
+                                <BleepsOnAnimator continuous transitions={{ entering: 'typeShort', }} />
 
                                 <Card theme={theme}>
                                     <Animator>
@@ -218,7 +218,7 @@ const ResumePage = () => {
                         <Animator>
                             <AnimatorUIListener>
                                 <HeadingComponent title={CoursesData.title} active={active} />
-                                <BleepsOnAnimator continuous transitions={{ entering: 'error', }} />
+                                <BleepsOnAnimator continuous transitions={{ entering: 'typeShort', }} />
 
                                 <Card theme={theme}>
                                     <Animator>
@@ -288,7 +288,7 @@ const ResumePage = () => {
                         {/* Language  */}
                         <Animator>
                             <AnimatorUIListener>
-                                <BleepsOnAnimator continuous transitions={{ entering: 'type', }} />
+                                <BleepsOnAnimator continuous transitions={{ entering: 'typeShort', }} />
                                 <HeadingComponent title={LanguageData.title} active={active} />
                                 <blockquote className="mt-10 mb-[200px]" data-arwes-global-palette='primary'>
                                     <ul>
@@ -310,6 +310,7 @@ const ResumePage = () => {
                         {/* interest  */}
                         <Animator>
                             <AnimatorUIListener>
+                                <BleepsOnAnimator continuous transitions={{ entering: 'typeShort', }} />
                                 <HeadingComponent title={InterestData.title} active={active} />
                                 <blockquote className="my-10" data-arwes-global-palette='primary'>
                                     <ul>

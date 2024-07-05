@@ -4,13 +4,14 @@ import { useRef, } from "react";
 import { homeData, socialLinksData } from "../data/index";
 
 
+
 const SocialLinks = () => {
     const bleeps = useBleeps();
     return (
         <>
             {
                 socialLinksData.map((element, idx) =>
-                    <a target='_blank' key={idx} onMouseEnter={() => bleeps.click?.play()} href={element.href} className="flex items-center gap-x-2" >
+                    <a target='_blank' key={idx} onMouseEnter={() => bleeps.clickLink?.play()} href={element.href} className="flex items-center gap-x-2" >
                         {element.icon}
                         <h6 style={{ color: theme.colors.primary.text(1) }} className="hidden sm:block font-secondary  capitalize  text-[15px]">{element.text}</h6>
                     </a>
@@ -25,6 +26,8 @@ const SocialLinks = () => {
 
 
 const Header = ({ active, isScrolled }) => {
+    const bleeps = useBleeps();
+
     const svgRef = useRef(null);
     const { onRender } = useFrameSVGAssemblingAnimation(svgRef);
 
@@ -43,6 +46,7 @@ const Header = ({ active, isScrolled }) => {
 
                         <Animated animated={[aaVisibility()]} as="div" className="flex gap-x-5 z-10 relative items-center">
                             <a
+                                onMouseEnter={() => bleeps.clickHeader?.play()}
                                 href="/"
                                 className="kranox"
                                 style={{
@@ -70,7 +74,7 @@ const Header = ({ active, isScrolled }) => {
                             </a>
 
                             <Animator active={active}>
-                                <Text as="a" href="/" className="font-primary font-normal  uppercase text-[23px]" style={{ color: theme.colors.primary.text(1), textShadow: '0 0 4px rgba(180,249,251,0.65)', }}>
+                                <Text onMouseEnter={() => bleeps.clickHeader?.play()} as="a" href="/" className="font-primary font-normal  uppercase text-[23px]" style={{ color: theme.colors.primary.text(1), textShadow: '0 0 4px rgba(180,249,251,0.65)', }}>
                                     Rohit Singh
                                 </Text>
                                 <Animator active={true}>
@@ -84,7 +88,7 @@ const Header = ({ active, isScrolled }) => {
                         </Animated>
 
 
-
+                        {/* social links  */}
                         <Animator duration={{ enter: 1.2 }}>
                             <Animated animated={[aaVisibility(), aaFlicker()]} className="hidden sm:flex flex-wrap z-10 relative  justify-center mt-2 mb-4 gap-x-6 gap-y-1 items-center">
                                 <SocialLinks />
