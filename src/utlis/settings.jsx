@@ -15,6 +15,8 @@ export const octagonStyle = `
 }
 `
 
+
+
 export const octagonStyle2 = `
 .octagon .arwes-react-frames-framesvgoctagon [data-name=bg] {
     color: ${theme.colors.primary.deco(2)};
@@ -26,6 +28,8 @@ export const octagonStyle2 = `
     filter: drop-shadow(0 0 4px hsl(60, 75%, 50%))                            
 }
 `
+
+
 
 
 export const underlineStyle = `

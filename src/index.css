@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, html, body{
-  height: 100%;
-  scrollbar-color: hsla(191,78%,50%,1) transparent !important;
+:root,
+html,
+body {
+    height: 100%;
+    scrollbar-color: hsla(191, 78%, 50%, 1) transparent !important;
 }
 
-
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(190, 78%, 50%) transparent !important;
+    background-color: hsl(190, 78%, 50%) transparent !important;
 }
