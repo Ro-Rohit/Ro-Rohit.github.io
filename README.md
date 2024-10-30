@@ -1,5 +1,5 @@
 <a href="https://github.com/Ro-Rohit/Ro-Rohit.github.io">
-  <img src="./public/assets/github-header-image.png" alt="Banner" style="width:100%;">
+  <img src="./public/assets/pixelcut-export.png" alt="Banner" style="width:100%;">
 </a>
 
 
