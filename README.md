@@ -28,17 +28,11 @@
 ### 📊 GitHub Stats:
 
 ---
-<div style="margin:auto;">
-  <div>
+<div style="margin:auto; display:flex; flex-wrap:wrap; flex-gap:10px">
     ![](https://github-readme-stats.vercel.app/api?username=Ro-Rohit&theme=github_dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-  </div>
-  <div style="padding: 10px 0px">
     ![](https://github-readme-streak-stats.herokuapp.com/?user=Ro-Rohit&theme=github_dark&hide_border=false)<br/>
-  </div>
-  <div>
     ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Ro-                
     Rohit&theme=github_dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-  </div>
 </div>
 
 
