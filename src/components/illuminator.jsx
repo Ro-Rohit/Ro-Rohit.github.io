@@ -10,7 +10,6 @@ const Lighter = () => {
                 height: '100%',
                 overflow: 'clip',
                 clipPath: createFrameOctagonClip({ squareSize: 100 }),
-                borderBottom: '2px solid hsl(180 75% 60%)',
             }}
         >
             <Illuminator color="hsl(180 50% 50% / 20%)" size={300} />

@@ -1,6 +1,6 @@
 import { Animator, BleepsProvider } from '@arwes/react'
 import { AnimatorGeneralProvider } from '@arwes/react'
-import { soundSettings, stylesBaseline, theme } from './utlis/settings'
+import { soundSettings, stylesBaseline } from './utlis/settings'
 import { Global } from '@emotion/react'
 import {
     RouterProvider,
@@ -50,7 +50,6 @@ const App = () => (
             <BleepsProvider {...soundSettings}>
                 <Animator active={true} combine manager="stagger">
                     <Background />
-
                     <Lighter />
 
                     <div className="relative z-[99]">

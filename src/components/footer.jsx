@@ -123,7 +123,7 @@ const Footer = ({ active }) => {
                             style={{ color: theme.colors.primary.text(1), textShadow: '0 0 4px rgba(180,249,251,0.65)', }}
                             className="font-primary text-center md:text-left uppercase mb-8 text-3xl font-semibold" as="h1"
                         >
-                            Let's connect
+                            Let&apos;s connect
                         </Text>
                     </Animator>
 
