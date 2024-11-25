@@ -292,6 +292,47 @@ export const projectData = [
     },
 
     {
+        title: 'Notion Landing Page Design',
+        description:
+            'Created a sleek and intuitive portfolio design in Figma, focusing on aesthetics and usability. The design features well-structured layouts, engaging visuals, and responsive components, ensuring a seamless user experience tailored to highlight the client’s work and brand identity.',
+        image: './assets/notion-design.png',
+        date: 'December 2024',
+        effort: 'Low effort',
+        work: 'Design',
+        link: '#',
+    },
+    {
+        title: 'Event landing Page Design ',
+        description:
+            'Created a sleek and intuitive portfolio design in Figma, focusing on aesthetics and usability. The design features well-structured layouts, engaging visuals, and responsive components, ensuring a seamless user experience tailored to highlight the client’s work and brand identity.',
+        image: './assets/event-design.png',
+        date: 'December 2024',
+        effort: 'Low effort',
+        work: 'Design',
+        link: 'https://www.figma.com/proto/A5nNLKEdi0oFow2Yc0WMIk/Untitled?node-id=1-17&starting-point-node-id=1%3A17&t=ebhY2FAtOA1PsWLP-1',
+    },
+    {
+        title: 'Healthcare: Appointment Management System',
+        description:
+            'Developed a robust Healthcare Appointment Management System using Next.js for seamless user interaction and Appwrite for secure data storage. Integrated Twilio SMS services to send automated appointment reminders and notifications. The system streamlines appointment scheduling, ensuring an efficient and user-friendly experience for both patients and healthcare providers.',
+        image: './assets/healthcare.png',
+        date: 'December 2024',
+        effort: 'Medium  effort',
+        work: 'code',
+        link: 'https://healthcare-git-main-rohit-singhs-projects-126e4f7f.vercel.app/',
+    },
+    {
+        title: 'Wix Portfolio Design',
+        description:
+            "Developed a modern, visually appealing portfolio website using Wix for a client. The design emphasizes clean layouts, user-friendly navigation, and responsiveness, tailored to showcase the client's work and personal brand effectively.",
+        image: './assets/wix-portfolio-design.png',
+        date: 'December 2024',
+        effort: 'Low effort',
+        work: 'Design',
+        link: 'https://aditiwari3232.wixsite.com/adityatiwari',
+    },
+
+    {
         title: 'Real State Starter',
         description:
             'Developed a sleek and responsive web application using React and Tailwind CSS. Created an intuitive user interface with dynamic rendering, ensuring a clean and consistent design system. The result is a modern, aesthetically pleasing, and highly functional frontend experience.',
