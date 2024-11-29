@@ -281,6 +281,17 @@ export const projectData = [
         link: '#',
     },
     {
+        title: 'Crochet Landing Page Design',
+        description:
+            'Created a sleek and intuitive portfolio design in Figma, focusing on aesthetics and usability. The design features well-structured layouts, engaging visuals, and responsive components, ensuring a seamless user experience tailored to highlight the client’s work and brand identity.',
+        image: './assets/crochet.png',
+        date: 'December 2024',
+        effort: 'Med effort',
+        work: 'Design',
+        link: 'https://www.figma.com/proto/81WtmQbuU7lxm9Y7hGR2z9/Crochet?node-id=3-2&node-type=canvas&t=Tg2gzlrhoSuPfEIP-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
+    },
+
+    {
         title: 'Genius: AI-Powered SaaS',
         description:
             'Genius is a cutting-edge AI SaaS solution built with Next.js and styled with ShadCN UI. It leverages powerful integrations like Stripe for seamless subscription management and payments, Supabase for secure and scalable database management, and Gemini AI for advanced API capabilities. Designed for developers, content creators, and businesses, Genius transforms how you work by offering intelligent tools for code generation, image creation from prompts, and audio-video transcription and summarization.',
@@ -292,14 +303,14 @@ export const projectData = [
     },
 
     {
-        title: 'Notion Landing Page Design',
+        title: 'Cypress Landing Page Design',
         description:
             'Created a sleek and intuitive portfolio design in Figma, focusing on aesthetics and usability. The design features well-structured layouts, engaging visuals, and responsive components, ensuring a seamless user experience tailored to highlight the client’s work and brand identity.',
         image: './assets/notion-design.png',
         date: 'December 2024',
         effort: 'Low effort',
         work: 'Design',
-        link: '#',
+        link: 'https://www.figma.com/proto/7MqLXnU5ZG7kOzfPBh3fL3/cypress-design?node-id=2-2&node-type=canvas&t=niDlhFOO94PqHtQy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     },
     {
         title: 'Event landing Page Design ',
