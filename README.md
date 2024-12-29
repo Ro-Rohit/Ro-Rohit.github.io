@@ -1,6 +1,3 @@
-<a href="https://github.com/Ro-Rohit/Ro-Rohit.github.io">
-  <img src="./public/assets/pixelcut-export.png" alt="Banner" style="margin:auto; width:70%">
-</a>
 
 ### 🚀 About Me
 
@@ -13,6 +10,7 @@ When I'm not coding, you'll find me reading books and talking about technology.
 
 Find more about me <a href="https://ro-rohit.github.io/" alt="here.">here.<a>
 </p>
+
 
 <ul style="color:#f0f6fc;font-size:16px; margin-bottom:20px; ">
   <li>👨‍💻 Passionate about sharing my journey and learnings in tech.</li>
