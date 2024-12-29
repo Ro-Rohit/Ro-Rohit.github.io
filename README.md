@@ -5,7 +5,13 @@
 ### 🚀 About Me
 
 <p style="color:#f0f6fc;font-size:16px;margin-bottom:20px">
-👋 Hi there! I'm Rohit, a passionate Software Engineer on a journey to explore the world of technology. I specialize in full stack development using Next.js, React.js, and Node.js, and I’m enthusiastic about contributing to open source projects. 🚀 I'm committed to continuous learning and sharing my insights to help others grow in their tech journeys.  
+  Hey there! 👋 My name is Rohit and I'm a passionate full stack developer from India with a keen interest in both frontend and backend technologies.
+
+I mostly work with TypeScript, React, Next.js and Node.js but also take the time to explore other languages like  Golang to create CLI tools that add value to projects.
+
+When I'm not coding, you'll find me reading books and talking about technology.
+
+Find more about me <a href="https://ro-rohit.github.io/" alt="here.">here.<a>
 </p>
 
 <ul style="color:#f0f6fc;font-size:16px; margin-bottom:20px; ">
